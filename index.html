@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Notas del Curso</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Registro de Alumnos y Certámenes</h1>
+        
+        <form id="studentForm">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required placeholder="Ej. Carlos">
+            </div>
+            
+            <div class="form-group">
+                <label for="c1">Certamen 1:</label>
+                <input type="number" id="c1" min="0" max="100" required placeholder="0 - 100">
+            </div>
+
+            <div class="form-group">
+                <label for="c2">Certamen 2:</label>
+                <input type="number" id="c2" min="0" max="100" required placeholder="0 - 100">
+            </div>
+
+            <div class="form-group">
+                <label for="c3">Certamen 3:</label>
+                <input type="number" id="c3" min="0" max="100" required placeholder="0 - 100">
+            </div>
+
+            <button type="submit" id="btnAgregar">Agregar Alumno</button>
+        </form>
+
+        <p id="contadorAlumnos">Alumnos ingresados: 0 / 10</p>
+
+        <div id="resultadosEstudiantes" class="results-grid"></div>
+
+        <div id="resumenCurso" class="summary-box" style="display: none;">
+            <h2>Resumen General del Curso</h2>
+            <div id="contenidoResumen"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
